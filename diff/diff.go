@@ -12,10 +12,10 @@ type FileDiff struct {
 	// the old path of the file
 	PathOld string
 	// the new path of the file
-	PathNew string
+	Pathnew string
 
 	// the old timestamp (empty if not present)
-	TimeOld string
+	Timeold string
 	// the new timestamp (empty if not present)
 	TimeNew string
 
