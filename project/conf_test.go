@@ -31,31 +31,4 @@ runner:
 		Runner: map[string]*Runner{
 			"golint": {
 				Cmd:         "golint ./...",
-				Errorformat: []string{`%f:%l:%c: %m`},
-				Name:        "golint",
-				Level:       "info",
-			},
-			"govet": {
-				Cmd:    "go tool vet -all -shadowstrict .",
-				Format: "govet",
-				Name:   "govet",
-				Level:  "warning",
-			},
-			"namekey": {
-				Cmd:    "echo 'name'",
-				Format: "checkstyle",
-				Name:   "nameoverwritten",
-				Level:  "error",
-			},
-		},
-	}
-
-	got, err := Parse([]byte(yml))
-	if err != nil {
-		t.Fatal(err)
-	}
-	if diff := pretty.Compare(got, want); diff != "" {
-		t.Errorf("Parse() diff: (-got +want)\n%s", diff)
-	}
-
-}
+				Errorformat:` ▋
